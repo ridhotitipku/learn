@@ -15,4 +15,5 @@ for product in products:
     segmentation = df_product.groupby('income_range')['user_id'].count()
     segmentation = segmentation.reset_index() 
     segmentation
-    plt.pie(segmentation['user_id'], labels = segmentation['income_r
+    plt.pie(segmentation['user_id'], labels = segmentation['income_range'], autopct='%.2f%%') #Create a pie chart, autopct='%.2f%%' to show percent and 2 decimal
+    plt.show()
